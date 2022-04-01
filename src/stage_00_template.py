@@ -5,16 +5,22 @@ from tqdm import tqdm
 import logging
 from src.utils.common import read_yaml, create_directories
 import random
+import warnings
 
 
 STAGE = "STAGE_NAME" ## <<< change stage name 
 
-logging.basicConfig(
-    filename=os.path.join("logs", 'running_logs.log'), 
-    level=logging.INFO, 
-    format="[%(asctime)s: %(levelname)s: %(module)s]: %(message)s",
-    filemode="a"
-    )
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.DEBUG)
+
+formatter = logging.Formatter("[%(asctime)s: %(levelname)s: %(module)s]: %(message)s")
+
+file_handler = logging.FileHandler(os.path.join("logs", "running_logs.log"))
+file_handler.setFormatter(formatter)
+
+logger.addHandler(file_handler)
+
+warnings.filterwarnings('ignore')
 
 
 def main(config_path, params_path):
@@ -31,10 +37,10 @@ if __name__ == '__main__':
     parsed_args = args.parse_args()
 
     try:
-        logging.info("\n********************")
-        logging.info(f">>>>> stage {STAGE} started <<<<<")
+        logger.info("\n********************")
+        logger.info(f">>>>> stage {STAGE} started <<<<<")
         main(config_path=parsed_args.config, params_path=parsed_args.params)
-        logging.info(f">>>>> stage {STAGE} completed!<<<<<\n")
+        logger.info(f">>>>> stage {STAGE} completed!<<<<<\n")
     except Exception as e:
-        logging.exception(e)
+        logger.exception(e)
         raise e

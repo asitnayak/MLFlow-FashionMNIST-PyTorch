@@ -1,0 +1,214 @@
+[2022-04-01 09:46:52,666: INFO: stage_01_get_data]: 
+********************
+[2022-04-01 09:46:52,666: INFO: stage_01_get_data]: >>>>> stage GET_DATA started <<<<<
+[2022-04-01 09:46:52,671: INFO: stage_01_get_data]: getting data
+[2022-04-01 09:47:20,506: INFO: stage_01_get_data]: data available at FashionMNISTDir
+[2022-04-01 09:47:20,507: INFO: stage_01_get_data]: Preparing data loader
+[2022-04-01 09:47:20,533: INFO: stage_01_get_data]: >>>>> stage GET_DATA completed!<<<<<
+
+[2022-04-01 09:48:18,306: INFO: stage_02_base_model_creation]: 
+********************
+[2022-04-01 09:48:18,306: INFO: stage_02_base_model_creation]: >>>>> stage BASE_MODEL_CREATION started <<<<<
+[2022-04-01 09:48:18,517: INFO: stage_02_base_model_creation]: base model created
+[2022-04-01 09:48:18,681: INFO: stage_02_base_model_creation]: base model saved at artifacts\base_model.pth
+[2022-04-01 09:48:18,681: INFO: stage_02_base_model_creation]: >>>>> stage BASE_MODEL_CREATION completed!<<<<<
+
+[2022-04-01 09:49:27,307: INFO: stage_03_training_model]: 
+********************
+[2022-04-01 09:49:27,307: INFO: stage_03_training_model]: >>>>> stage TRAINING_MODEL started <<<<<
+[2022-04-01 09:49:27,422: ERROR: stage_03_training_model]: Can't get attribute 'CNN' on <module '__main__' from 'src/stage_03_training_model.py'>
+Traceback (most recent call last):
+  File "src/stage_03_training_model.py", line 43, in main
+    loaded_model = torch.load(base_model_path)
+  File "C:\Users\asitw\ineuron\Git\MLFlow_FashionMNIST_PyTorch\MLFlow-FashionMNIST-PyTorch\env\lib\site-packages\torch\serialization.py", line 712, in load
+    return _load(opened_zipfile, map_location, pickle_module, **pickle_load_args)
+  File "C:\Users\asitw\ineuron\Git\MLFlow_FashionMNIST_PyTorch\MLFlow-FashionMNIST-PyTorch\env\lib\site-packages\torch\serialization.py", line 1046, in _load
+    result = unpickler.load()
+  File "C:\Users\asitw\ineuron\Git\MLFlow_FashionMNIST_PyTorch\MLFlow-FashionMNIST-PyTorch\env\lib\site-packages\torch\serialization.py", line 1039, in find_class
+    return super().find_class(mod_name, name)
+AttributeError: Can't get attribute 'CNN' on <module '__main__' from 'src/stage_03_training_model.py'>
+[2022-04-01 09:49:27,427: INFO: stage_03_training_model]: >>>>> stage TRAINING_MODEL completed!<<<<<
+
+[2022-04-01 10:06:06,838: INFO: stage_03_training_model]: 
+********************
+[2022-04-01 10:06:06,839: INFO: stage_03_training_model]: >>>>> stage TRAINING_MODEL started <<<<<
+[2022-04-01 10:06:06,844: INFO: stage_03_training_model]: loading base model from artifacts\base_model.pth
+[2022-04-01 10:06:06,846: ERROR: stage_03_training_model]: Can't get attribute 'CNN' on <module '__main__' from 'src/stage_03_training_model.py'>
+Traceback (most recent call last):
+  File "src/stage_03_training_model.py", line 44, in main
+    loaded_model = torch.load(base_model_path)
+  File "C:\Users\asitw\ineuron\Git\MLFlow_FashionMNIST_PyTorch\MLFlow-FashionMNIST-PyTorch\env\lib\site-packages\torch\serialization.py", line 712, in load
+    return _load(opened_zipfile, map_location, pickle_module, **pickle_load_args)
+  File "C:\Users\asitw\ineuron\Git\MLFlow_FashionMNIST_PyTorch\MLFlow-FashionMNIST-PyTorch\env\lib\site-packages\torch\serialization.py", line 1046, in _load
+    result = unpickler.load()
+  File "C:\Users\asitw\ineuron\Git\MLFlow_FashionMNIST_PyTorch\MLFlow-FashionMNIST-PyTorch\env\lib\site-packages\torch\serialization.py", line 1039, in find_class
+    return super().find_class(mod_name, name)
+AttributeError: Can't get attribute 'CNN' on <module '__main__' from 'src/stage_03_training_model.py'>
+[2022-04-01 10:06:06,851: INFO: stage_03_training_model]: >>>>> stage TRAINING_MODEL completed!<<<<<
+
+[2022-04-01 10:07:23,101: INFO: stage_03_training_model]: 
+********************
+[2022-04-01 10:07:23,101: INFO: stage_03_training_model]: >>>>> stage TRAINING_MODEL started <<<<<
+[2022-04-01 10:07:23,105: INFO: stage_03_training_model]: loading base model from artifacts\base_model.pth
+[2022-04-01 10:07:23,246: INFO: stage_03_training_model]: Base model loaded
+[2022-04-01 10:07:23,288: INFO: stage_03_training_model]: Base model loaded into cpu
+[2022-04-01 10:07:23,306: INFO: stage_01_get_data]: getting data
+[2022-04-01 10:07:23,416: INFO: stage_01_get_data]: data available at FashionMNISTDir
+[2022-04-01 10:07:23,417: INFO: stage_01_get_data]: Preparing data loader
+[2022-04-01 10:13:25,751: INFO: stage_03_training_model]: Model training completed successfully
+[2022-04-01 10:13:25,759: INFO: stage_03_training_model]: trained model saved at artifacts\trained_model.pth
+[2022-04-01 10:13:25,815: INFO: stage_03_training_model]: >>>>> stage TRAINING_MODEL completed!<<<<<
+
+[2022-04-01 10:13:54,471: INFO: stage_04_prediction]: 
+********************
+[2022-04-01 10:13:54,472: INFO: stage_04_prediction]: >>>>> stage STAGE_NAME started <<<<<
+[2022-04-01 10:13:54,478: INFO: stage_01_get_data]: getting data
+[2022-04-01 10:13:54,565: INFO: stage_01_get_data]: data available at FashionMNISTDir
+[2022-04-01 10:13:54,565: INFO: stage_01_get_data]: Preparing data loader
+[2022-04-01 10:13:54,574: INFO: stage_04_prediction]: trained model loaded
+[2022-04-01 10:13:54,575: INFO: stage_04_prediction]: trained model loaded into cpu
+[2022-04-01 10:13:54,625: ERROR: stage_04_prediction]: module 'numpy' has no attribute 'concat'
+Traceback (most recent call last):
+  File "src/stage_04_prediction.py", line 81, in <module>
+    main(config_path=parsed_args.config)
+  File "src/stage_04_prediction.py", line 59, in main
+    pred = np.concat(pred, torch.argmax(y_pred, 1).cpu().numpy())
+  File "C:\Users\asitw\ineuron\Git\MLFlow_FashionMNIST_PyTorch\MLFlow-FashionMNIST-PyTorch\env\lib\site-packages\numpy\__init__.py", line 314, in __getattr__
+    "{!r}".format(__name__, attr))
+AttributeError: module 'numpy' has no attribute 'concat'
+[2022-04-01 10:15:03,852: INFO: stage_04_prediction]: 
+********************
+[2022-04-01 10:15:03,853: INFO: stage_04_prediction]: >>>>> stage STAGE_NAME started <<<<<
+[2022-04-01 10:15:03,859: INFO: stage_01_get_data]: getting data
+[2022-04-01 10:15:03,966: INFO: stage_01_get_data]: data available at FashionMNISTDir
+[2022-04-01 10:15:03,967: INFO: stage_01_get_data]: Preparing data loader
+[2022-04-01 10:15:03,974: INFO: stage_04_prediction]: trained model loaded
+[2022-04-01 10:15:03,975: INFO: stage_04_prediction]: trained model loaded into cpu
+[2022-04-01 10:15:04,095: ERROR: stage_04_prediction]: only integer scalar arrays can be converted to a scalar index
+Traceback (most recent call last):
+  File "src/stage_04_prediction.py", line 81, in <module>
+    main(config_path=parsed_args.config)
+  File "src/stage_04_prediction.py", line 59, in main
+    pred = np.concatenate(pred, torch.argmax(y_pred, 1).cpu().numpy())
+  File "<__array_function__ internals>", line 6, in concatenate
+TypeError: only integer scalar arrays can be converted to a scalar index
+[2022-04-01 10:18:59,773: INFO: stage_04_prediction]: 
+********************
+[2022-04-01 10:18:59,773: INFO: stage_04_prediction]: >>>>> stage STAGE_NAME started <<<<<
+[2022-04-01 10:18:59,780: INFO: stage_01_get_data]: getting data
+[2022-04-01 10:18:59,871: INFO: stage_01_get_data]: data available at FashionMNISTDir
+[2022-04-01 10:18:59,872: INFO: stage_01_get_data]: Preparing data loader
+[2022-04-01 10:18:59,878: INFO: stage_04_prediction]: trained model loaded
+[2022-04-01 10:18:59,879: INFO: stage_04_prediction]: trained model loaded into cpu
+[2022-04-01 10:18:59,909: ERROR: stage_04_prediction]: only integer scalar arrays can be converted to a scalar index
+Traceback (most recent call last):
+  File "src/stage_04_prediction.py", line 81, in <module>
+    main(config_path=parsed_args.config)
+  File "src/stage_04_prediction.py", line 59, in main
+    pred = np.concatenate(pred, torch.argmax(y_pred, 1).numpy())
+  File "<__array_function__ internals>", line 6, in concatenate
+TypeError: only integer scalar arrays can be converted to a scalar index
+[2022-04-01 10:22:36,221: INFO: stage_04_prediction]: 
+********************
+[2022-04-01 10:22:36,221: INFO: stage_04_prediction]: >>>>> stage STAGE_NAME started <<<<<
+[2022-04-01 10:22:36,227: INFO: stage_01_get_data]: getting data
+[2022-04-01 10:22:36,313: INFO: stage_01_get_data]: data available at FashionMNISTDir
+[2022-04-01 10:22:36,313: INFO: stage_01_get_data]: Preparing data loader
+[2022-04-01 10:22:36,321: INFO: stage_04_prediction]: trained model loaded
+[2022-04-01 10:22:36,323: INFO: stage_04_prediction]: trained model loaded into cpu
+[2022-04-01 10:22:38,920: INFO: stage_04_prediction]: prediction for test data finished
+[2022-04-01 10:22:39,690: ERROR: stage_04_prediction]: [Errno 2] No such file or directory: 'Prediction\\prediction.csv'
+Traceback (most recent call last):
+  File "src/stage_04_prediction.py", line 81, in <module>
+    main(config_path=parsed_args.config)
+  File "src/stage_04_prediction.py", line 64, in main
+    df.to_csv(prediction_data_file_path)
+  File "C:\Users\asitw\ineuron\Git\MLFlow_FashionMNIST_PyTorch\MLFlow-FashionMNIST-PyTorch\env\lib\site-packages\pandas\core\generic.py", line 3482, in to_csv
+    storage_options=storage_options,
+  File "C:\Users\asitw\ineuron\Git\MLFlow_FashionMNIST_PyTorch\MLFlow-FashionMNIST-PyTorch\env\lib\site-packages\pandas\io\formats\format.py", line 1105, in to_csv
+    csv_formatter.save()
+  File "C:\Users\asitw\ineuron\Git\MLFlow_FashionMNIST_PyTorch\MLFlow-FashionMNIST-PyTorch\env\lib\site-packages\pandas\io\formats\csvs.py", line 243, in save
+    storage_options=self.storage_options,
+  File "C:\Users\asitw\ineuron\Git\MLFlow_FashionMNIST_PyTorch\MLFlow-FashionMNIST-PyTorch\env\lib\site-packages\pandas\io\common.py", line 707, in get_handle
+    newline="",
+FileNotFoundError: [Errno 2] No such file or directory: 'Prediction\\prediction.csv'
+[2022-04-01 10:23:29,610: INFO: stage_04_prediction]: 
+********************
+[2022-04-01 10:23:29,610: INFO: stage_04_prediction]: >>>>> stage STAGE_NAME started <<<<<
+[2022-04-01 10:23:29,617: INFO: stage_01_get_data]: getting data
+[2022-04-01 10:23:29,703: INFO: stage_01_get_data]: data available at FashionMNISTDir
+[2022-04-01 10:23:29,703: INFO: stage_01_get_data]: Preparing data loader
+[2022-04-01 10:23:29,714: INFO: stage_04_prediction]: trained model loaded
+[2022-04-01 10:23:29,716: INFO: stage_04_prediction]: trained model loaded into cpu
+[2022-04-01 10:23:34,362: INFO: stage_04_prediction]: prediction for test data finished
+[2022-04-01 10:23:34,562: INFO: stage_04_prediction]: saved prediction results into Prediction\prediction.csv
+[2022-04-01 10:23:34,574: INFO: stage_04_prediction]: >>>>> stage STAGE_NAME completed!<<<<<
+
+[2022-04-01 17:13:50,984: INFO: stage_04_prediction]: 
+********************
+[2022-04-01 17:13:50,985: INFO: stage_04_prediction]: >>>>> stage STAGE_NAME started <<<<<
+[2022-04-01 17:13:51,006: INFO: stage_01_get_data]: getting data
+[2022-04-01 17:13:51,977: INFO: stage_01_get_data]: data available at FashionMNISTDir
+[2022-04-01 17:13:51,978: INFO: stage_01_get_data]: Preparing data loader
+[2022-04-01 17:13:52,223: INFO: stage_04_prediction]: trained model loaded
+[2022-04-01 17:13:52,259: INFO: stage_04_prediction]: trained model loaded into cpu
+[2022-04-01 17:13:56,255: INFO: stage_04_prediction]: prediction for test data finished
+[2022-04-01 17:13:56,616: INFO: stage_04_prediction]: saved prediction results into Prediction\prediction.csv
+[2022-04-01 17:13:56,664: ERROR: stage_04_prediction]: Found input variables with inconsistent numbers of samples: [10000, 16]
+Traceback (most recent call last):
+  File "src/stage_04_prediction.py", line 88, in <module>
+    main(config_path=parsed_args.config)
+  File "src/stage_04_prediction.py", line 72, in main
+    fs = f1_score(target, y_pred)
+  File "C:\Users\asitw\ineuron\Git\MLFlow_FashionMNIST_PyTorch\MLFlow-FashionMNIST-PyTorch\env\lib\site-packages\sklearn\metrics\_classification.py", line 1131, in f1_score
+    zero_division=zero_division,
+  File "C:\Users\asitw\ineuron\Git\MLFlow_FashionMNIST_PyTorch\MLFlow-FashionMNIST-PyTorch\env\lib\site-packages\sklearn\metrics\_classification.py", line 1270, in fbeta_score
+    zero_division=zero_division,
+  File "C:\Users\asitw\ineuron\Git\MLFlow_FashionMNIST_PyTorch\MLFlow-FashionMNIST-PyTorch\env\lib\site-packages\sklearn\metrics\_classification.py", line 1544, in precision_recall_fscore_support
+    labels = _check_set_wise_labels(y_true, y_pred, average, labels, pos_label)
+  File "C:\Users\asitw\ineuron\Git\MLFlow_FashionMNIST_PyTorch\MLFlow-FashionMNIST-PyTorch\env\lib\site-packages\sklearn\metrics\_classification.py", line 1348, in _check_set_wise_labels
+    y_type, y_true, y_pred = _check_targets(y_true, y_pred)
+  File "C:\Users\asitw\ineuron\Git\MLFlow_FashionMNIST_PyTorch\MLFlow-FashionMNIST-PyTorch\env\lib\site-packages\sklearn\metrics\_classification.py", line 84, in _check_targets
+    check_consistent_length(y_true, y_pred)
+  File "C:\Users\asitw\ineuron\Git\MLFlow_FashionMNIST_PyTorch\MLFlow-FashionMNIST-PyTorch\env\lib\site-packages\sklearn\utils\validation.py", line 334, in check_consistent_length
+    % [int(l) for l in lengths]
+ValueError: Found input variables with inconsistent numbers of samples: [10000, 16]
+[2022-04-01 17:23:19,359: INFO: stage_04_prediction]: 
+********************
+[2022-04-01 17:23:19,359: INFO: stage_04_prediction]: >>>>> stage STAGE_NAME started <<<<<
+[2022-04-01 17:23:19,368: INFO: stage_01_get_data]: getting data
+[2022-04-01 17:23:19,466: INFO: stage_01_get_data]: data available at FashionMNISTDir
+[2022-04-01 17:23:19,467: INFO: stage_01_get_data]: Preparing data loader
+[2022-04-01 17:23:19,476: INFO: stage_04_prediction]: trained model loaded
+[2022-04-01 17:23:19,477: INFO: stage_04_prediction]: trained model loaded into cpu
+[2022-04-01 17:23:23,248: INFO: stage_04_prediction]: prediction for test data finished
+[2022-04-01 17:23:23,321: INFO: stage_04_prediction]: saved prediction results into Prediction\prediction.csv
+[2022-04-01 17:23:23,351: ERROR: stage_04_prediction]: Target is multiclass but average='binary'. Please choose another average setting, one of [None, 'micro', 'macro', 'weighted'].
+Traceback (most recent call last):
+  File "src/stage_04_prediction.py", line 88, in <module>
+    main(config_path=parsed_args.config)
+  File "src/stage_04_prediction.py", line 72, in main
+    fs = f1_score(target, pred)
+  File "C:\Users\asitw\ineuron\Git\MLFlow_FashionMNIST_PyTorch\MLFlow-FashionMNIST-PyTorch\env\lib\site-packages\sklearn\metrics\_classification.py", line 1131, in f1_score
+    zero_division=zero_division,
+  File "C:\Users\asitw\ineuron\Git\MLFlow_FashionMNIST_PyTorch\MLFlow-FashionMNIST-PyTorch\env\lib\site-packages\sklearn\metrics\_classification.py", line 1270, in fbeta_score
+    zero_division=zero_division,
+  File "C:\Users\asitw\ineuron\Git\MLFlow_FashionMNIST_PyTorch\MLFlow-FashionMNIST-PyTorch\env\lib\site-packages\sklearn\metrics\_classification.py", line 1544, in precision_recall_fscore_support
+    labels = _check_set_wise_labels(y_true, y_pred, average, labels, pos_label)
+  File "C:\Users\asitw\ineuron\Git\MLFlow_FashionMNIST_PyTorch\MLFlow-FashionMNIST-PyTorch\env\lib\site-packages\sklearn\metrics\_classification.py", line 1367, in _check_set_wise_labels
+    "choose another average setting, one of %r." % (y_type, average_options)
+ValueError: Target is multiclass but average='binary'. Please choose another average setting, one of [None, 'micro', 'macro', 'weighted'].
+[2022-04-01 17:26:41,244: INFO: stage_04_prediction]: 
+********************
+[2022-04-01 17:26:41,245: INFO: stage_04_prediction]: >>>>> stage STAGE_NAME started <<<<<
+[2022-04-01 17:26:41,251: INFO: stage_01_get_data]: getting data
+[2022-04-01 17:26:41,363: INFO: stage_01_get_data]: data available at FashionMNISTDir
+[2022-04-01 17:26:41,363: INFO: stage_01_get_data]: Preparing data loader
+[2022-04-01 17:26:41,375: INFO: stage_04_prediction]: trained model loaded
+[2022-04-01 17:26:41,377: INFO: stage_04_prediction]: trained model loaded into cpu
+[2022-04-01 17:26:44,129: INFO: stage_04_prediction]: prediction for test data finished
+[2022-04-01 17:26:44,185: INFO: stage_04_prediction]: saved prediction results into Prediction\prediction.csv
+[2022-04-01 17:26:44,274: INFO: stage_04_prediction]: [0.84437751 0.97829379 0.8186248  0.89651741 0.8134715  0.95884774
+ 0.68884892 0.93857965 0.97074864 0.95281583]
+[2022-04-01 17:26:44,286: INFO: stage_04_prediction]: >>>>> stage STAGE_NAME completed!<<<<<
+

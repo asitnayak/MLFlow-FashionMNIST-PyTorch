@@ -5,6 +5,9 @@ pandas
 numpy
 PyYAML
 tensorflow
+scikit-learn
+torch
+torchvision
 
 ### local packages -
 -e . # << uncomment this to install from setup.pyconda activas
